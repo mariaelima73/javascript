@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7 - JavaScript</title>
+    <style>
+        body{
+            background-color: rgb(175, 226, 255);
+            color: rgb(0, 53, 122);
+            text-align: center;
+            font-size: 25px;
+            font-family: Arial;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Formatações para Números</h1>
+    <span>Exercício 7</span>
+    <br>
+    <br>
+    
+    <script>
+        
+        var n1 = Number(prompt('Digite um número:'))
+        document.write(`O número é ${n1.toFixed(2)}.<br>`) // Fixar duas casas decimais.
+        document.write(`O número é ${n1.toFixed(2).replace('.',',')}.<br>`) // Fixar duas casas decimais e trocar (.) para (,).
+    
+        document.write(`O número é ${n1.toLocaleString('pt-BR', {style:'currency', currency: 'BRL'})}.<br>`) // Conversão de moedas.
+        document.write(`O número é ${n1.toLocaleString('pt-BR', {style:'currency', currency: 'USD'})}.<br>`)
+
+
+    </script>
+</body>
+</html>

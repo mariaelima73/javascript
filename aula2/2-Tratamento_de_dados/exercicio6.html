@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6 - JavaScript</title>
+    <style>
+        body{
+            background-color: rgb(175, 226, 255);
+            color: rgb(0, 53, 122);
+            text-align: center;
+            font-size: 25px;
+            font-family: Arial;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Concatenações e Formatações</h1>
+    <span>Exercício 6</span>
+    <br>
+    <br>
+    
+    <script>
+
+        var nome1 = 'Zezinho'
+        var idade = 22
+        var nota = 5.5
+        document.write('O aluno ' + nome1 + ' com '+ idade + ' anos de idade conseguiu a nota '+ nota+ '.<br>')
+        document.write(`O aluno ${nome1} com ${idade} anos de idade conseguiu a nota ${nota}.<br>`) //Sem concatenação(+), usa-se ${var} com crase(`)
+
+        var nome2 = prompt('Qual seu nome?')
+        document.write(`Olá ${nome2}! Seu nome tem ${nome2.length} letras.<br>`) // var.length faz a contagem de caracteres de uma string.
+        document.write(`Seu nome em Maiúsculo é ${nome2.toUpperCase()}.<br>`)
+        document.write(`Seu nome em Minúsculo é ${nome2.toLowerCase()}.<br>`)
+
+    </script>
+</body>
+</html>
