@@ -25,12 +25,14 @@
 
         var nome1 = 'Zezinho'
         var idade = 22
+        /* Transformar Number to String:
+        String(n) ou n.toString() */
         var nota = 5.5
         document.write('O aluno ' + nome1 + ' com '+ idade + ' anos de idade conseguiu a nota '+ nota+ '.<br>')
         document.write(`O aluno ${nome1} com ${idade} anos de idade conseguiu a nota ${nota}.<br>`) //Sem concatenação(+), usa-se ${var} com crase(`)
 
         var nome2 = prompt('Qual seu nome?')
-        document.write(`Olá ${nome2}! Seu nome tem ${nome2.length} letras.<br>`) // var.length faz a contagem de caracteres de uma string.
+        document.write(`Olá ${nome2}! Seu nome tem ${nome2.length} caracteres.<br>`) // var.length faz a contagem de caracteres de uma string.
         document.write(`Seu nome em Maiúsculo é ${nome2.toUpperCase()}.<br>`)
         document.write(`Seu nome em Minúsculo é ${nome2.toLowerCase()}.<br>`)
 

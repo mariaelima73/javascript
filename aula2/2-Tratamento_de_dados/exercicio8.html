@@ -27,18 +27,18 @@
         var n2 = Number(prompt('Digite outro número:'))
 
         document.write(`Os números são: ${n1} e ${n2}.<br>`)
-
-        var res1 = n1 + n2
-        var res2 = n1 - n2
-        var res3 = n1 * n2
-        var res4 = n1 / n2
-        var res5 = n1 % n2
-        var res6 = n1 ** n2
+        // Ordem de precedência aritméticos: 1º (parênteses)
+        var res1 = n1 + n2  // 4º
+        var res2 = n1 - n2  // 4º
+        var res3 = n1 * n2  // 3º - da esquerda pra direita
+        var res4 = n1 / n2  // 3º
+        var res5 = n1 % n2  // 3º
+        var res6 = n1 ** n2 // 2º
 
         document.write('Soma, Subtração, Multiplicação, Divisão, Resto da Divisão e Potenciação. <br>')
         document.write(`Os resultados são: ${res1}, ${res2}, ${res3}, ${res4}, ${res5}, ${res6}.<br>`) // Fixar duas casas decimais.
 
-        // Para a mesma variável, utilizando a redução de comandos com atribuições.
+        // Para a mesma variável, utilizando a redução de comandos com auto-atribuições.
         var sol1 = n1 += n2
         //var sol2 = n1 -= n2
         //var sol3 = n1 *= n2
@@ -46,13 +46,54 @@
         //var sol5 = n1 %= n2
         //var sol6 = n1 **= n2
 
-        document.write(`A solução é ${sol1}.<br>`)
+        document.write(`A solução somar com auto-atribuição é ${sol1}.<br>`)
 
         var sol7 = ++sol1 // n1++ - Pós-incremento (precisaria mostrar a resposta 2x); ++n1 - Pré-incremento (Mostra a resposta logo na pergunta)
-        document.write(`A solução é ${sol7}.<br>`)
-        var sol8 = --sol1 //Erro!
-        document.write(`A solução é ${sol8}.<br>`)
+        document.write(`A solução pós-incremento ++ é ${sol7}.<br>`)
+        var sol8 = --sol1 // Pós-decremento com subtração, pega a partir da incrementação anterior e mantém.
+        document.write(`A solução pós-decremento -- é ${sol8}.<br>`)
+        // fazer n1 voltar ao valor original
+        n1 -= n2
 
+        // Primeiro faz-se a aritmética e depois o relacional
+        // Relacionais
+        resp1 = n1 > n2 //1º
+        resp2 = n1 < n2 //2º
+        resp3 = n1 >= n2 //3º
+        resp4 = n1 <= n2 //4º
+        /* == Igualdade não distingue tipo
+        5 == 5 true
+        5 =='5' true
+        A string tem o mesmo valor do inteiro */
+        resp5 = n1 == n2
+        var N2 = toString(n2)
+        resp6 = n1 === N2
+        /* === Igualdade Restrita distingue tipo
+        5 === 5 true
+        5 ==='5' false
+        A string é um tipo e o inteiro é outro */
+        resp7 = n1 != n2
+        /* != Não igual - Distingue o tipo
+        !== Não igual restrito - Não distingue o tipo */
+        resp8 = n1 !== N2 // AQUI SÓ FUNCIONA SE VOCÊ TROCAR DE TIPO
+
+        resp9 = n1 > n2 && n2 % 2 == 0 // Conjunção e
+        resp10 = n1 < n2 || n2 / 2 == 2 // Disjunção ou
+        // Ordem de precedência: 1º ! - 2º && - 3º ||
+
+        resp11 = n1 > n2 ? "Sim":"Não" //
+
+        document.write(`${n1} maior que ${n2}: ${resp1}.<br>`)
+        document.write(`${n1} menor que ${n2}: ${resp2}.<br>`)
+        document.write(`${n1} maior ou igual que ${n2}: ${resp3}.<br>`)
+        document.write(`${n1} menor ou igual que ${n2}: ${resp4}.<br>`)
+        document.write(`${n1} é igual a ${n2}: ${resp5}.<br>`)
+        document.write(`${n1} é igual (restrito) a ${n2}: ${resp6}.<br>`)
+        document.write(`${n1} não é igual a ${n2}: ${resp7}.<br>`)
+        document.write(`${n1} não é igual (restrito) a ${n2}: ${resp8}.<br>`)
+        document.write(`${n1} maior que ${n2} e ${n2} dividido por 2 resta 0: ${resp9}.<br>`)
+        document.write(`${n1} menor que ${n2} ou ${n2} dividido por 2 é igual a 2: ${resp10}.<br>`)
+        document.write(`${n1} maior que ${n2}? ${resp11}.<br>`)
 
 
     </script>
