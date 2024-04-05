@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - JavaScript</title>
+    <style>
+        body{
+            background-color: blue;
+            color: yellowgreen;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Entendendo o DOM</h1>
+    <p>Postando aqui os resultados</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id = "msg">
+        Clique aqui!!!
+    </div>
+    <div id = "msg2">
+        Clique aqui!!!
+    </div>
+    <div name = "msg">
+        Clique aqui!!!
+    </div>
+    <div class = "msg">
+        Clique aqui!!!
+    </div>
+    <div class = "msg">
+        Clique aqui!!!
+    </div>
+    <script>
+        //document.write('Veja o poder do DOM')
+        //document.write(document.charset) - Escrever uma coisa específica, como charset, url, title
+        //document.write(document.title)
+        var p1 = document.getElementsByTagName('p')[1]
+        document.write('Esse é o texto: ' + p1.innerHTML) // .innerText - traz o texto seco. .innerHTML - traz o texto com formatação
+        p1.style.background = 'white'
+
+        var corpo = document.body
+        corpo.style.background = 'black'
+
+        alert(p1.innerText)
+
+        var d = document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...'
+
+        var d2 = document.getElementsByName('msg')[0]
+        d2.style.background = 'purple'
+        d2.innerText = 'Estou aguardando novamente...'
+
+        var d3 = document.getElementsByClassName('msg')[0]
+        d3.style.background = 'blue'
+        d3.innerText = 'Estou cansada de aguardar...'
+
+        var d4 = document.querySelector('div#msg2')
+        d4.style.background = 'yellow'
+        d4.innerText = 'Estou aguardando ainda...'
+
+        var d5 = document.querySelectorAll('div.msg')[1]
+        d5.style.background = 'brown'
+        d5.innerText = 'Vou embora...'
+
+    </script>
+</body>
+</html>
