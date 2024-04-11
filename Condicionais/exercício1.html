@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN - SENAI(PI)</title>
+    <style>
+        body{
+            background-color: black;
+            color: coral;
+            font: normal 18pt Arial;
+            text-align: center;
+        }
+        input#txtvel{
+            font: normal 15pt Arial;
+            width: 50px;
+        }
+        input.verif{
+            font: normal 15pt Arial;
+            background-color: coral;
+            border: none;
+            border-radius: 40px;
+            padding: 10px;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+        div#res{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <span>Velocidade do transporte</span>
+    <input type="number" name="txtvel" id="txtvel">
+    <span>Km/h.</span>
+    <br>
+    <br>
+    <input type="button" value="Verificar" class="verif" onclick="calcular()">
+    <br>
+    <div id="res">Resultado</div>
+
+    <script>
+        function calcular(){
+            var txtv = document.querySelector('input#txtvel')
+            var res = document.querySelector('div#res')
+            var vel = Number(txtv.value)
+            
+            res.innerHTML = `<br>A sua velocidade atual é de <strong>${vel} Km/h.<br></strong>`
+
+            if (vel > 60){
+                res.innerHTML += 'Você ultrapassou a velocidade permitida, MULTADO!<br>'
+            }
+            else{
+                res.innerHTML += 'Você está em velocidade segura.<br>'
+            }
+
+            res.innerHTML += 'Dirija sempre com o cinto de segurança.'
+        }
+
+    </script>
+    
+</body>
+</html>

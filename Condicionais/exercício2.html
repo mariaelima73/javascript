@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN - SENAI(PI)</title>
+    <style>
+        body{
+            background-color: black;
+            color: coral;
+            font: normal 18pt Arial;
+            text-align: center;
+        }
+        input#país{
+            font: normal 15pt Arial;
+            width: 200px;
+        }
+        input.verif{
+            font: normal 15pt Arial;
+            background-color: coral;
+            border: none;
+            border-radius: 40px;
+            padding: 10px;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+        div#res{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Brasileiro ou Estrageiro?</h1>
+    <span>Qual seu país?</span>
+    <input type="text" name="país" id="país">
+    <input type="button" value="Verificar" class="verif" onclick="nacionalidade()">
+    <div id="res"></div>
+
+    <script>
+        function nacionalidade(){
+            var país = document.querySelector('input#país').value
+
+            document.querySelector('div#res').innerHTML = `Vivendo no(a) <strong>${país} </strong>`
+            
+            if (país2 === "brasil") {
+                res.innerHTML += 'você é brasileiro!'
+            }
+            else{
+                res.innerHTML += 'você é estrageiro.'
+            }
+        }
+    
+
+    </script>
+    
+</body>
+</html>
