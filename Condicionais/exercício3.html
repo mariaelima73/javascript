@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brasileiro ou Estrageiro?</title>
+    <title>TSE - SENAI</title>
     <style>
         body{
             background-color: black;
@@ -11,9 +11,9 @@
             font: normal 18pt Arial;
             text-align: center;
         }
-        input#país{
+        input#idade{
             font: normal 15pt Arial;
-            width: 200px;
+            width: 50px;
         }
         input.verif{
             font: normal 15pt Arial;
@@ -32,27 +32,25 @@
     </style>
 </head>
 <body>
-    <h1>Brasileiro ou Estrageiro?</h1>
-    <span>Qual seu país?</span>
-    <input type="text" name="país" id="país">
-    <input type="button" value="Verificar" class="verif" onclick="nacionalidade()">
+    <h1>Verificação de Idade para Votação</h1>
+    <span>Digite sua idade:</span>
+    <input type="number" name="idade" id="idade">
+    <input type="button" value="Verificar" class="verif" onclick="idade()">
     <div id="res"></div>
 
     <script>
-        function nacionalidade(){
-            var país = document.querySelector('input#país').value
+        function idade(){
+            var idade = document.querySelector('input#idade').valueAsNumber
+            var mensagem
 
-            document.querySelector('div#res').innerHTML = `Vivendo no(a) <strong>${país} </strong>`
-            
-            if (país2 === "brasil") {
-                res.innerHTML += 'você é brasileiro!'
-            }
-            else{
-                res.innerHTML += 'você é estrageiro.'
-            }
+            if (idade < 16) {
+                mensagem = 'Você NÃO está apto a votar!'
+            } else if (idade < 18 || idade >= 65 ) {
+                mensagem = 'Pra você a votação é OPCIONAL!'
+            } else { mensagem = 'Você é OBRIGADO a votar!'}
+
+            document.getElementById('res').innerHTML = `Você tem ${idade} anos. ${mensagem}`
         }
-    
-
     </script>
     
 </body>
