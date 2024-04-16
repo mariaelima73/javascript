@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Idade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="carregar()">
+    <header class="font">
+
+        <h1>Essa é uma autoidentificação com base nos seus dados</h1>
+    
+    </header>
+    <section>
+
+        <div id="nasc">
+            <p>Ano de Nascimento:
+                <input type="number" name="txtano" id="txtano" min="1900">
+            </p>
+            <p>Sexo:
+                <input type="radio" name="radsex" id="femi" checked>
+                <label for="femi">Feminino</label>
+                <input type="radio" name="radsex" id="masc"> <!--radio, cria a bolinha; checked, seleciona a bolinha-->
+                <label for="masc">Masculino</label>
+            </p>
+            <p>
+                <input type="button" value="VERIFICAR" id="verf" onclick="verificar()">
+            </p>
+        </div>
+
+        <div id="resp">
+            Preencha os dados para visualizar o resultado.
+        <!-- <img src="foto-adulto-f.png" alt="foto-idade" id="imagem">--> 
+        </div>
+
+     </section>
+     <footer class="font">
+         <p>&copy Elaine Lima Enterteniment</p>
+     </footer>
+ 
+     <script src="script.js">
+ 
+     </script>
+</body>
+</html>

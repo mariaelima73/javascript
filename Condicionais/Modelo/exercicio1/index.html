@@ -6,21 +6,21 @@
     <title>Saudações Animadas</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
+<body onload="carregar()"> <!--Assim que carregar o site, ele carrega a função.-->
+    <header class = "font">
         <h1>
-            Título
+            Hora do Dia
         </h1>
     </header>
     <section>
-       <div class="hora">
+       <div id="msg">
         hora
        </div>
-       <div id="imagem">
-        imagem
+       <div>
+        <img src="manha.png" alt="Manhã" id="imagem">
        </div>
     </section>
-    <footer>
+    <footer class = "font">
         <p>&copy Elaine Lima Enterteniment</p>
     </footer>
 

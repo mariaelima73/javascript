@@ -1,9 +1,10 @@
 body{
     background-color: #1E90FF; /*DodgerBlue*/
     font: normal 15pt Arial;
+    text-align: center;
 }
 header{
-    color: white;
+    color: #694a35;
     text-align: center;
 }
 section{
@@ -14,8 +15,11 @@ section{
     margin: auto;
     box-shadow: 5px 5px 10px black; /*Sombra - deslocamento lateral/vertical/espalhamento*/
 }
+div#msg{
+    margin-bottom: 20px;
+}
 footer{
-    color: white;
+    color: #694a35;
     text-align: center;
     font-style: italic;
 
